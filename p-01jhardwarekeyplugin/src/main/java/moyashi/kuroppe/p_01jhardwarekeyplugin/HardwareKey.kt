@@ -1,7 +1,5 @@
 package moyashi.kuroppe.p_01jhardwarekeyplugin
 
-fun Int.toKeyName(): String = HardwareKey.values().filter { this == it.assignedNumber }.first().name
-
 enum class HardwareKey(val assignedNumber: Int) {
     ENTER(23),
     UP(19),
