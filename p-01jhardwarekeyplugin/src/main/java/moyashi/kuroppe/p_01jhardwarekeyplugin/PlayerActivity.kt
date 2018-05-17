@@ -23,7 +23,7 @@ class PlayerActivity : UnityPlayerActivity() {
     }
 
     override fun dispatchKeyEvent(key: KeyEvent): Boolean {
-        if (!pushedKey() && (toKeyName(key.keyCode) == HardwareKey.NUMBER8.name)) return false
+        if (!pushedKey()) return false
         UnitySendMessage("Player", "pushed", toKeyName(key.keyCode))
         return super.dispatchKeyEvent(key)
     }
